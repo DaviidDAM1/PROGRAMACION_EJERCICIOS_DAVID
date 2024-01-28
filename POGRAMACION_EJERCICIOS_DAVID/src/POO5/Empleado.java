@@ -1,5 +1,6 @@
 package POO5;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Empleado {
@@ -14,6 +15,10 @@ public class Empleado {
 	        this.fechacontrato = new Date(añoContrato - 1900, mesContrato - 1, diaContrato);
 	    
 	}
+
+		public Empleado(String string, double d, LocalDate of) {
+			// TODO Auto-generated constructor stub
+		}
 
 		public String getNombre() {
 			return nombre;
