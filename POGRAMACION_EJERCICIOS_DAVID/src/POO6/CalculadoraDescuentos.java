@@ -1,31 +1,37 @@
 package POO6;
 
 public class CalculadoraDescuentos {
-	private final double porcentaje = 10;
-	private double precioproducto;
-	private int cantidadproducto;
+	private final double porcentaje = 0.10 ;
+	private double precio;
+	private int cantidades;
 
-
-	public double getPrecioproducto() {
-		return precioproducto;
+	public CalculadoraDescuentos(double precio, int cantidades) {
+		this.precio = precio;
+		this.cantidades = cantidades;
 	}
 
-	public void setPrecioproducto(int precioproducto) {
-		this.precioproducto = precioproducto;
+	public double getPorcentaje() {
+		return porcentaje;
 	}
-	
-	public int getCantidadproducto() {
-		return cantidadproducto;
+	public double getPrecio() {
+		return precio;
 	}
-
-	public void setCantidadproducto(int cantidadproducto) {
-		this.cantidadproducto = cantidadproducto;
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
-
-	public void CalcularDescuento() {
-		double precioFinal = (cantidadproducto * precioproducto) /porcentaje;
-		
+	public String DescontarProducto() {
+		double descuento = porcentaje * precio;
+        double descuentoTotal = descuento * cantidades;
+        double precioFinal = precio - descuentoTotal;
+ 
+        return "El Descuento del Producto es " + descuento +
+                "\nEl Descuento total para " + cantidades + " unidades es " + descuentoTotal +
+                "\nEl Precio total con el descuento es " + precioFinal;
 	}
-	
-	
+	public int getCantidades() {
+		return cantidades;
+	}
+	public void setCantidades(int cantidades) {
+		this.cantidades = cantidades;
+	}
 }

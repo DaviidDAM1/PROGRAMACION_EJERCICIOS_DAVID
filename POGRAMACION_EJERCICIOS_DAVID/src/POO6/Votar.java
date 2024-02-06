@@ -1,24 +1,27 @@
 package POO6;
 
-import javax.swing.JOptionPane;
-
 public class Votar {
-    private String nombre;
-    private final int edad=20;
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void edadVotar() {
-        if (edad < 18) {
-            JOptionPane.showMessageDialog(null, "No tienes edad para votar");
-        } else
-			JOptionPane.showMessageDialog(null, "Tienes edad para votar");
-    }
+	private final int edadmin = 18;
+	private int edad;
+	public Votar(int edad) {
+		this.edad = edad;
+	}
+	public String ComprobarEdad() {
+		if (edad < edadmin) {
+			return "No puedes votar, eres menor de edad. Lo siento";
+		} else {
+		return "Eres mayor de edad, ¡puedes votar! ";
+		}
+	}
+	public int getEdadmin() {
+		return edadmin;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
 }
+
 
