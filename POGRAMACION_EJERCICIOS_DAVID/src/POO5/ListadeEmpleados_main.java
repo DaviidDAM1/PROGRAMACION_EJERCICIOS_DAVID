@@ -2,7 +2,6 @@ package POO5;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class ListadeEmpleados_main {
 
 	public static void main(String[] args) {
