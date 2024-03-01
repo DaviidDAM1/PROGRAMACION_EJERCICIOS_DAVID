@@ -1,5 +1,7 @@
 package POOsobrecargadeconstructores;
 
+import javax.swing.JOptionPane;
+
 public class Rectangulo {
 
 	public static void main(String[] args) {
